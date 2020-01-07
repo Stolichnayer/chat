@@ -54,4 +54,8 @@ function addToMessages(message, mine) {
 
 socket.on('serverMessage', (message) => {
     addToMessages(message, false);
-})
+});
+
+socket.on('update_online_users', function(online_users){
+    document.getElementById("num_users").innerHTML = online_users;
+});
