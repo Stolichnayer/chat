@@ -9,11 +9,11 @@ server.listen(process.env.PORT || 3000);
 app.use(express.static("public"));
 
 
-
 io.sockets.on('connection', function(socket) {
     
     var clientIp = socket.request.connection.remoteAddress;
-      console.log('New connection from ' + clientIp);
+    
+    console.log('New connection from ' + clientIp);
 
     socket.on('chat_message', function(message) {
         io.emit('chat_message', '<strong>' + socket.username + '</strong>: ' + message);
@@ -21,6 +21,13 @@ io.sockets.on('connection', function(socket) {
 
     socket.on('clientMessage', function(message){
         console.log("Client: " + message);
-        socket.broadcast.emit('serverMessage', message);
+        socket.broadcast.emit('serverMessage',"<div class='otherUsername'> <strong>" + socket.username + '</strong></div> ' + message);
     })
+
+    socket.on('submitUsername', function(username){
+        console.log(username + " Joined");
+        this.username = username;
+        
+    })
+
 });

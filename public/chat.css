@@ -20,6 +20,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     background-color: #f8f8f8;
     overflow: hidden;
+    display: none;
   }
   
   .top_menu {
@@ -178,6 +179,14 @@
     bottom: 0;
     font-size: 23px;
   }
+  .bottom_wrapper2 {
+    position: relative;
+    width: 900px;
+    top: -50px;
+    padding: 20px 20px;
+    font-size: 23px;
+    margin: auto;
+  }
   .bottom_wrapper .message_input_wrapper {
     display: inline-block;
     height: 50px;
@@ -187,7 +196,26 @@
     position: relative;
     padding: 0 20px;
   }
+  .bottom_wrapper2 .message_input_wrapper2 {
+    display: inline-block;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #bcbdc0;
+    width: calc(100% - 160px);
+    position: relative;
+    padding: 0 20px;
+    background-color: white;
+  }
   .bottom_wrapper .message_input_wrapper .message_input {
+    border: none;
+    height: 100%;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    position: absolute;
+    outline-width: 0;
+    color: gray;
+  }
+  .bottom_wrapper2 .message_input_wrapper2 .message_input2 {
     border: none;
     height: 100%;
     box-sizing: border-box;
@@ -209,11 +237,34 @@
     float: right;
     
   }
+  .bottom_wrapper2 .send_message2 {
+    width: 140px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #a3d063;
+    border: 2px solid #a3d063;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    text-align: center;
+    float: right;
+    
+  }
   .bottom_wrapper .send_message:hover {
     color: #a3d063;
     background-color: #fff;
   }
+  .bottom_wrapper2 .send_message2:hover {
+    color: #a3d063;
+    background-color: #fff;
+  }
   .bottom_wrapper .send_message .text {
+    font-weight: 300;
+    display: inline-block;
+    line-height: 48px;
+    
+  }
+  .bottom_wrapper2 .send_message2 .text {
     font-weight: 300;
     display: inline-block;
     line-height: 48px;
@@ -226,4 +277,26 @@
   
   .messages {
     word-break: break-all;
+  }
+
+  .logo {
+    width: 300px;
+    display: block;
+    margin: auto;
+  }
+
+  .myUsername {
+    display: inline;
+    color: red;
+    font-size: 24px;
+  }
+
+  .otherUsername {
+    display: inline;
+    color: blue;
+    font-size: 24px;
+  }
+
+  .text {
+    display: inline;
   }
