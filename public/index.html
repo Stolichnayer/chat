@@ -5,12 +5,12 @@
 <script src="bootstrap.min.js"></script>
 <script defer src="chat.js"></script>
 <script src="socket.io/socket.io.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
+<!-- Include the above in your HEAD tag ---------->
+<title>Chat - Stolichnayer</title>
 <div class="start_page">
     <img class="logo" src="logo.png" alt="logo">
     <div class="bottom_wrapper2 clearfix2">
-        <div class="message_input_wrapper2"><input onkeydown="submitKey(event);" class="message_input2" placeholder="Enter your username..." /></div>
+        <div class="message_input_wrapper2"><input onkeydown="submitKey(event);" class="message_input2" placeholder="Enter your username..." maxlength="16" /></div>
         <div onclick="submit()" class="send_message2">
             <div class="icon"></div>
             <div class="text">Join</div>
@@ -19,19 +19,38 @@
 </div>
 
 
+
+
 <div class="chat_window">
+    
+        <div class="userlist">
+            
+    <div class="top_menu2">
+        <img style="width: 20px;" src="user.png">
+        <div class="title">&nbsp;Connected users</div>
+
+    </div>
+    <div class="usernames">
+
+
+    </div>
+</div>
+    
+    
+ 
     <div class="top_menu">
-        <div class="users"> <span style="color: green; font-size: 32px;">&#8226;</span> &nbsp; <div id="num_users">1</div> &nbsp;Online</div>
+       
+        <div class="users"> <img id="arrow" onclick="show_list();" style="width: 16px;" src= "arrow.png"><span style="color: green; font-size: 32px;">&#8226;</span> &nbsp; <div id="num_users">1</div> &nbsp;Online</div>
         <div class="title">Chat</div>
     </div>
     <ul class="messages">
-
+        
     </ul>
     <div class="bottom_wrapper clearfix">
         <div class="message_input_wrapper"><input onkeydown="sendMessageKey(event);" class="message_input" placeholder="Type your message here..." /></div>
         <div onclick="sendMessage()" class="send_message">
             <div class="icon"></div>
-            <div class="text"">Send</div>
+            <div class="text">Send</div>
         </div>
     </div>
 </div>

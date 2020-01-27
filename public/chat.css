@@ -15,12 +15,27 @@
     border-radius: 10px;
     background-color: #fff;
     left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+    display: none;
+  }
+  
+ .userlist {
+    position: absolute;
+    width: calc(100% - 20px);
+    max-width: 200px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    left: -13%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     background-color: #f8f8f8;
     overflow: hidden;
-    display: none;
+    display: block;
   }
   
   .top_menu {
@@ -31,6 +46,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    
+  }
+  
+  .top_menu2 {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 30px;
+    
     
   }
   .top_menu .buttons {
@@ -182,6 +211,7 @@
     position: absolute;
     bottom: 0;
     font-size: 23px;
+    border-radius: 10px;
   }
   .bottom_wrapper2 {
     position: relative;
@@ -313,3 +343,24 @@
     justify-content: center;
     align-items: center;
   }
+  
+  .join_text {
+      font-size: 24px;
+      padding: 5px;
+      margin-left : 10px;
+      color: #666666;
+  }
+  
+  
+  .usernames {
+      overflow: auto;
+      height: 94%;
+      font-size: 22px;
+      font-weight: 450;
+      color: blue;
+      list-style-type: none;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+  }
+  
