@@ -6,10 +6,6 @@ socket.on('reconnect_attempt', () => {
   socket.io.opts.transports = ['polling', 'websocket'];
 });
 
-socket.on('test', function(data){
-    console.log(data);
-})
-
 socket.on('serverMessage', (message) => {
     addToMessages(message, false);
 });
@@ -59,10 +55,7 @@ socket.on('update_local_userlist', function(data){
   }
 
 });
-
-
 // -----------------------------------------------------------------------------
-
 
 function sendMessage(){
     var text = encodeHTML(document.getElementsByClassName("message_input")[0].value);
@@ -141,6 +134,3 @@ function show_list(){
     
     is_hidden = !is_hidden;
 }
-
-
-
