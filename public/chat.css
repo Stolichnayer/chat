@@ -364,3 +364,6 @@
       
   }
   
+  b, strong {
+    font-weight: bold;
+}
