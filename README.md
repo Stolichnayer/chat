@@ -9,7 +9,7 @@ You can try it at https://stolichnayer.com
 ## Ready to chat!
 ![Login - Submit username](https://github.com/Stolichnayer/chat/blob/master/example%20images/chatting.png)
 
-## Connect - disconnect events, online users monitor
+## Connect - disconnect events, online users monitor, message time stamps
 ![Login - Submit username](https://github.com/Stolichnayer/chat/blob/master/example%20images/dcc.png)
 
 ## Dependencies used
